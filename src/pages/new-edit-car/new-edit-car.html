@@ -1,0 +1,36 @@
+<ion-header no-border>
+
+  <ion-navbar color="dark">
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list inset>
+    <form [formGroup]="carForm">
+      <ion-item-divider color="dark">
+        Car info
+      </ion-item-divider>
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" formControlName="name" [(ngModel)]="car.name">{{car.name}}</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Number</ion-label>
+        <ion-input type="tel" formControlName="carNr" [(ngModel)]="car.carNr">{{car.carNr}}</ion-input>
+      </ion-item>
+    </form>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer no-border>
+
+  <button id="main-btn" ion-button block clear large [disabled]="!carForm.valid" (click)="save()">
+    Save
+  </button>
+
+</ion-footer>

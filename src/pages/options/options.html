@@ -1,0 +1,7 @@
+<ion-list>
+  <!--<ion-list-header>Options</ion-list-header>-->
+  <button ion-item (click)="newCar()">Add new car</button>
+  <button ion-item *ngIf="car" (click)="editCar()">Edit selected</button>
+  <button ion-item *ngIf="car" (click)="deleteCar()">Delete selected</button>
+  <button ion-item *ngIf="car" (click)="getSettings()">Request settings</button>
+</ion-list>
